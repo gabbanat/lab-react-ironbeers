@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import AllBeers from "./componets/allBeers"
+import Games from "./componets/Games"
 import {Route, Switch, Link} from "react-router-dom"
 import Home from "./componets/Home"
 import Deal from "./componets/Deal"
+import Navbar from "./componets/Navbar"
+import Axios from "axios"
 
 
 class App extends Component {
+  state = {
+    stores: []
+  }
+  componentDidMount(){
+    console.log(this)
+    Axios.get("https://www.cheapshark.com/api/1.0/stores").then(res => {
+    this.setState({
+      stores: res.data
+    })
+  })}
   render() {
     return (
       <div className="App">
-       <nav>
-         <Link to = "/">Home</Link>
-         <Link to = "/AllBeers">AllBeers</Link>
-       </nav>
+      
+      <Navbar/>
+
        <Switch>
        <Route
               exact
-              path="/AllBeers"
+              path="/Games"
               render={props => (
-                <AllBeers {...props}  />
+                <Games {...props}  />
               )}
               />
         <Route
@@ -34,7 +45,7 @@ class App extends Component {
               exact
               path="/deal/:id"
               render={props => (
-                <Deal {...props}  />
+                <Deal {...props} stores = {this.state.stores}  />
               )}
               />
        </Switch>

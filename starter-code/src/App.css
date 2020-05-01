@@ -26,3 +26,22 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+nav.navbar {
+  background-color: pink 
+}
+
+
+.tests ul{
+  display:inline !important;
+
+}
+
+.tests li {
+  display:inline;
+  float:left;
+  width:20vw;
+  margin:1vw;
+  overflow: hidden;
+ 
+}
