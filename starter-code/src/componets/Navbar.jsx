@@ -20,7 +20,7 @@ render() {
     
       <MDBNavbar light expand="sm">
         <MDBNavbarBrand>
-          <strong className="white-text">Navbar</strong>
+          <strong className="white-text">IronGames</strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
@@ -34,17 +34,17 @@ render() {
               <MDBNavLink to="/Games">Games</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBDropdown>
+              {/* <MDBDropdown>
                 <MDBDropdownToggle nav caret>
                   <span className="mr-2">Dropdown</span>
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
+                </MDBDropdownToggle> */}
+                {/* <MDBDropdownMenu>
                   <MDBDropdownItem href="#!">Action</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
+                </MDBDropdownMenu> */}
+              {/* </MDBDropdown> */}
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
